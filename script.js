@@ -1,7 +1,19 @@
 console.log("script")
-let search="movies";
-fetchData()
-async function fetchData(){
+//input taker
+document.querySelector(".search__input").addEventListener('keydown',function(event){
+    if(event.key==="Enter" && event.target.value!==""){
+        event.preventDefault();
+        const inputValue = event.target.value;
+        console.log(inputValue)
+        fetchData(inputValue)
+    }
+    else if(event.key==="Enter" && event.target.value ==''){
+        console.log("enter input")
+    }
+})
+
+//function to fetch data
+async function fetchData(search){
     const url = `http://www.omdbapi.com/?s=${search}&apikey=66968ffe`;
     
      try{
