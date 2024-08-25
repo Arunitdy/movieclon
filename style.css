@@ -3,11 +3,14 @@ body {
     padding: 0;
     background-color: #1d1d1d;
 }
+:root {
+  --url_background: url(''); 
+}
 
 .main {
     width: 100%;
     height: 700px;
-    background-image: url('https://wallpapers.com/images/hd/the-avengers-in-4k-united-to-save-the-universe-wbmp983ocnwvooku.jpg');
+    background-image: var(--url_background);
     background-size: cover;
     background-position: center;
     box-shadow: inset 0 90px 55px rgba(0, 0, 0, 0.9);

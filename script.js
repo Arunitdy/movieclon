@@ -1,4 +1,10 @@
 console.log("script")
+//main background
+
+const url_background = 'https://wallpapers.com/images/hd/the-avengers-in-4k-united-to-save-the-universe-wbmp983ocnwvooku.jpg';
+
+document.documentElement.style.setProperty("--url_background", `url('${url_background}')`);
+
 
 //input taker
 document.querySelector(".search__input").addEventListener('keydown',function(event){
