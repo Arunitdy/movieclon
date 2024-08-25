@@ -41,7 +41,7 @@ mark {
 }
 .upper_bar {
     display: flex;
-    align-items: center;  /* Aligns items vertically in the center */
+    align-items: center; 
     padding-top: 2%;
     padding-left: 2%;
 }
@@ -58,8 +58,8 @@ mark {
 
 .txt_login {
     display: flex;
-    align-items: center;  /* Aligns input and button vertically in the center */
-    margin-left: auto;    /* Pushes the login section to the right */
+    align-items: center;  
+    margin-left: auto; 
     padding-right: 20px;
 }
 
@@ -88,8 +88,7 @@ button:hover {
   
 button:active {
     transform: scale(0.9);
-  }
-  /* From Uiverse.io by joe-watson-sbf */ 
+  } 
 .search {
     display: flex;
     align-items: center;
@@ -146,12 +145,12 @@ button:active {
     fill: #b4b4b4;
   }
   .movie_container {
-    padding: 10px;
     border-radius: 10px;
     width: 230px;
     margin: 30px 10px 0 10px;
     height: 140px;
     box-shadow: inset 0 15px 10px rgba(0, 0, 0, 0.9);
+    flex-shrink: 0;
 }
 .movie_container:hover{
     transition: 0.5s ease, transform 0.5s ease; 
@@ -159,8 +158,12 @@ button:active {
 }
 .list {
     display: flex;
+    overflow-x: auto; 
+    overflow-y: hidden;
     width: 100%;
     height: auto;
     margin-bottom: 0;
 }
-
+.list::-webkit-scrollbar {
+    display: none; 
+}
