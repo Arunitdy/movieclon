@@ -1,6 +1,7 @@
 body {
     margin: 0;
     padding: 0;
+    background-color: #1d1d1d;
 }
 
 .main {
@@ -9,13 +10,13 @@ body {
     background-image: url('https://wallpapers.com/images/hd/the-avengers-in-4k-united-to-save-the-universe-wbmp983ocnwvooku.jpg');
     background-size: cover;
     background-position: center;
-    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.8);
+    box-shadow: inset 0 90px 55px rgba(0, 0, 0, 0.9);
 }
 
 .discription {
     padding-top: 300px;
     padding-left: 30px;
-    color: aliceblue;
+    color: #e4dede;
     font-size: 15px;
     font-weight: bold;
     line-height: 30px;
@@ -25,13 +26,12 @@ body {
     margin: 30px;
     padding: 10px;
     width: auto;
-    font-size: 15px;
     border-radius: 15px;
-    border: 1px solid white;
+    border: 1px solid #646464;
     backdrop-filter: blur(10px);
     background-color: transparent;
     box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.8);
-    color: aliceblue;
+    color: #e2dada;
 }
 
 mark {
@@ -39,23 +39,6 @@ mark {
     font-size: 20px;
     color: aliceblue;
 }
-
-.list {
-    display: flex;
-    width: 100%;
-    height: auto;
-    margin-bottom: 0;
-}
-
-.movie_container {
-    padding: 10px;
-    border-radius: 10px;
-    background-color: blue;
-    width: 230px;
-    margin: 30px 10px 0 10px;
-    height: 140px;
-}
-
 .upper_bar {
     display: flex;
     align-items: center;  /* Aligns items vertically in the center */
@@ -72,21 +55,6 @@ mark {
     text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.9);
 }
 
-.search {
-    width: 300px;
-    border: none;
-    border-radius: 20px;
-    margin: 0 10px;
-    padding: 10px;
-    background: transparent;
-    color: white;
-    border: 2px solid white;
-    backdrop-filter: blur(10px);
-    box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.5);
-}
-.search::placeholder {
-    color: white;
-}
 
 .txt_login {
     display: flex;
@@ -97,20 +65,110 @@ mark {
 
 .Login {
     margin: 0 10px;
-    border-radius: 14px;
+    border-radius: 24px;
     padding: 10px;
     border: none;
     width: 70px;
     background: transparent;
-    color: white;
-    border: 2px solid white;
+    color: #e2dada;
+    border: 1px solid #646464;
     backdrop-filter: blur(10px);
     box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.5);
 }
-
+.element{
+    color: #b4b4b4;
+}
 .element:hover {
     transform: scale(1.1);
 }
-.Login:hover{
+
+button:hover {
+    transform: scale(1.1);
+  }
+  
+button:active {
+    transform: scale(0.9);
+  }
+  /* From Uiverse.io by joe-watson-sbf */ 
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+  }
+  
+  .search__input {
+    font-family: inherit;
+    font-size: inherit;
+    background-color: transparent;
+    border: none;
+    color: #e2dada;
+    padding: 10px;
+    border-radius: 30px;
+    backdrop-filter: blur(10px);
+    width: 300px;
+    border: 1px solid #646464;
+    transition: all ease-in-out .5s;
+    margin-right: -2rem;
+  }
+  
+  .search__input:hover, .search__input:focus {
+    box-shadow: 0 0 1em #00000013;
+  }
+  
+  .search__input:focus {
+    outline: none;
+    background-color: transparent;
+  }
+  
+  .search__input::-webkit-input-placeholder {
+    font-weight: 100;
+    color: #ccc;
+  }
+  
+  .search__input:focus + .search__button {
+    background-color: transparent;
+  }
+  
+  .search__button {
+    border: none;
+    background-color: transparent;
+    margin-top: .1em;
+  }
+  
+  .search__button:hover {
+    cursor: pointer;
+  }
+  
+  .search__icon {
+    height: 1.3em;
+    width: 1.3em;
+    fill: #b4b4b4;
+  }
+  .movie_container {
+    padding: 10px;
+    border-radius: 10px;
+    width: 230px;
+    margin: 30px 10px 0 10px;
+    height: 140px;
+    background-image: url('https://i.ytimg.com/vi/mBrUx6M6R7U/maxresdefault.jpg');
+    background-size: contain;
+    box-shadow: inset 0 15px 10px rgba(0, 0, 0, 0.9);
+    background-repeat: no-repeat;
+    white-space: nowrap;
+}
+.movie_container:hover{
+    transition: 0.5s ease, transform 0.5s ease; 
     transform: scale(1.1);
 }
+.watch_a:hover{
+    transform: scale(1.1);
+}
+.list {
+    display: flex;
+    width: 100%;
+    height: auto;
+    margin-bottom: 0;
+    overflow-y: auto; 
+}
+
