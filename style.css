@@ -151,17 +151,10 @@ button:active {
     width: 230px;
     margin: 30px 10px 0 10px;
     height: 140px;
-    background-image: url('https://i.ytimg.com/vi/mBrUx6M6R7U/maxresdefault.jpg');
-    background-size: contain;
     box-shadow: inset 0 15px 10px rgba(0, 0, 0, 0.9);
-    background-repeat: no-repeat;
-    white-space: nowrap;
 }
 .movie_container:hover{
     transition: 0.5s ease, transform 0.5s ease; 
-    transform: scale(1.1);
-}
-.watch_a:hover{
     transform: scale(1.1);
 }
 .list {
@@ -169,6 +162,5 @@ button:active {
     width: 100%;
     height: auto;
     margin-bottom: 0;
-    overflow-y: auto; 
 }
 
