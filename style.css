@@ -168,3 +168,18 @@ button:active {
 .list::-webkit-scrollbar {
     display: none; 
 }
+@media only screen and (max-width: 767px) {
+    .upper_bar {
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        padding-top: 2%;
+        padding-left: 2%;
+    }
+    .menu{
+        display: flex;
+        gap: 50px;
+        margin-left: 1px;
+        margin-bottom: 100px;
+    }
+}

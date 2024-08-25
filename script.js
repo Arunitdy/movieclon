@@ -1,4 +1,5 @@
 console.log("script")
+
 //input taker
 document.querySelector(".search__input").addEventListener('keydown',function(event){
     if(event.key==="Enter" && event.target.value!==""){
@@ -15,7 +16,6 @@ document.querySelector(".search__input").addEventListener('keydown',function(eve
 //function to fetch data
 async function fetchData(search){
     const url = `http://www.omdbapi.com/?s=${search}&apikey=66968ffe`;
-    
      try{
         const responce =await fetch(url)
         const result= await responce.json()
