@@ -202,8 +202,8 @@ document.querySelector('.Login').addEventListener('click', () => {
           <input class="password" type="password" placeholder="Use letters and numbers">
           <button class="login1" >Login</button>
         </div>`;
-        document.documentElement.style.setProperty('--name-placeholder-color','#999D93');
-        document.documentElement.style.setProperty('--password-placeholder-color','#999D93');
+        document.documentElement.style.setProperty('--name-placeholder-color','#5f6060');
+        document.documentElement.style.setProperty('--password-placeholder-color','#5f6060');
         document.querySelector('.main').classList.add('main2');
 
         document.querySelector('.close-btn').addEventListener('click',()=>{
@@ -221,7 +221,7 @@ document.querySelector('.Login').addEventListener('click', () => {
             console.log("close login");                             
             document.querySelector('.login_div').innerHTML = '';
             document.querySelector(".main").classList.remove('main2');
-            document.querySelector(".login").textContent="Logout";
+            document.querySelector(".Login").textContent="Logout";
             document.documentElement.style.setProperty("--login--","white");
             document.documentElement.style.setProperty("--text--","#017FDF");
             console.log(login=true);
@@ -249,7 +249,7 @@ document.querySelector('.Login').addEventListener('click', () => {
   }
   else if (login===true){   //log out
     console.log("logout start");
-    document.querySelector(".login").textContent="Login";
+    document.querySelector(".Login").textContent="Login";
     login=false;
     console.log("logout");
   }
