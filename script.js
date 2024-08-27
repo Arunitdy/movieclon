@@ -181,3 +181,74 @@ document.querySelector(".Kide").addEventListener("click",function(){
                                                             </div> `
 
 })
+
+
+let login=false;
+document.querySelector('.login').addEventListener('click', () => {
+  console.log("Login event");
+  document.documentElement.style.setProperty("--text--","white");
+  document.documentElement.style.setProperty("--login--","#017FDF");
+  if(login===false)
+  {     
+        console.log("login");
+        document.querySelector('.lower_html').innerHTML = `
+        <div class="login_bar">
+          <button class="close-btn" >&times;</button>
+          <p1>User name</p1>
+          <input class="name" type="text" placeholder="User name">
+          <p1>Password</p1>
+          <input class="password" type="password" placeholder="Use letters and numbers">
+          <button class="login1" >Login</button>
+        </div>`;
+        document.documentElement.style.setProperty('--name-placeholder-color','#999D93');
+        document.documentElement.style.setProperty('--password-placeholder-color','#999D93');
+        document.querySelector('.home').classList.add('home2');
+
+        document.querySelector('.close-btn').addEventListener('click',()=>{
+          document.querySelector('.lower_html').innerHTML = '';
+          document.querySelector(".home").classList.remove("home2");
+          console.log("close login");
+        });
+
+        console.log("Login");
+        document.querySelector('.login1').addEventListener('click',()=>{
+          const name=document.querySelector('.name').value;
+          const password=document.querySelector('.password').value;
+          if(name!==''&&password!==''){                                     //the correct one
+            console.log('name:'+name+'  password:'+password);
+            console.log("close login");                             
+            document.querySelector('.lower_html').innerHTML = '';
+            document.querySelector(".home").classList.remove('home2');
+            document.querySelector(".login").textContent="Logout";
+            document.documentElement.style.setProperty("--login--","white");
+            document.documentElement.style.setProperty("--text--","#017FDF");
+            console.log(login=true);
+          }
+          else if(name!==''&&password==''){
+            document.querySelector('.password').placeholder='Please fill out this field';
+            document.documentElement.style.setProperty('--password-placeholder-color','red');
+            console.log(" password not enterd");
+          }
+          else if(name==''&&password!==''){
+            document.querySelector('.name').placeholder='Please fill out this field';
+            document.documentElement.style.setProperty('--name-placeholder-color','red');
+            console.log(" user name not enterd");
+          }else{ 
+            document.documentElement.style.setProperty('--password-placeholder-color', 'red');
+            document.documentElement.style.setProperty('--name-placeholder-color', 'red');
+            document.querySelector('.name').placeholder='Please fill out this field';
+            console.log(" user  and passwordname not enterd");
+            document.querySelector('.password').placeholder='Please fill out this field';
+          
+          }
+      
+      });
+      console.log(login);
+  }
+  else if (login===true){   //log out
+    console.log("logout start");
+    document.querySelector(".login").textContent="Login";
+    login=false;
+    console.log("logout");
+  }
+});
