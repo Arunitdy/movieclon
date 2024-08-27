@@ -182,16 +182,18 @@ document.querySelector(".Kide").addEventListener("click",function(){
 
 })
 
+//login
 
 let login=false;
-document.querySelector('.login').addEventListener('click', () => {
+
+document.querySelector('.Login').addEventListener('click', () => {
   console.log("Login event");
   document.documentElement.style.setProperty("--text--","white");
   document.documentElement.style.setProperty("--login--","#017FDF");
   if(login===false)
   {     
         console.log("login");
-        document.querySelector('.lower_html').innerHTML = `
+        document.querySelector('.login_div').innerHTML = `
         <div class="login_bar">
           <button class="close-btn" >&times;</button>
           <p1>User name</p1>
@@ -202,11 +204,11 @@ document.querySelector('.login').addEventListener('click', () => {
         </div>`;
         document.documentElement.style.setProperty('--name-placeholder-color','#999D93');
         document.documentElement.style.setProperty('--password-placeholder-color','#999D93');
-        document.querySelector('.home').classList.add('home2');
+    //    document.querySelector('.home').classList.add('home2');
 
         document.querySelector('.close-btn').addEventListener('click',()=>{
-          document.querySelector('.lower_html').innerHTML = '';
-          document.querySelector(".home").classList.remove("home2");
+          document.querySelector('.login_div').innerHTML = '';
+          //document.querySelector(".home").classList.remove("home2");
           console.log("close login");
         });
 
@@ -217,7 +219,7 @@ document.querySelector('.login').addEventListener('click', () => {
           if(name!==''&&password!==''){                                     //the correct one
             console.log('name:'+name+'  password:'+password);
             console.log("close login");                             
-            document.querySelector('.lower_html').innerHTML = '';
+            document.querySelector('.login_div').innerHTML = '';
             document.querySelector(".home").classList.remove('home2');
             document.querySelector(".login").textContent="Logout";
             document.documentElement.style.setProperty("--login--","white");
