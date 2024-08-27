@@ -16,7 +16,27 @@ body {
     box-shadow: inset 0 90px 55px rgba(0, 0, 0, 0.9);
 }
 
-.discription {
+.menu {
+  background-color: transparent;
+    font-weight: bold;
+    margin-left: 2%;
+    display: flex;
+    gap: 20%;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.9);
+}
+
+.element{
+  background-color: transparent;
+  color: #b4b4b4;
+  border-radius: 8px;
+  padding: 5px 16px;
+
+}
+.element:hover {
+  transform: scale(1.1);
+}
+
+.description {
     padding-top: 300px;
     padding-left: 30px;
     color: #e4dede;
@@ -49,16 +69,6 @@ mark {
     padding-left: 2%;
 }
 
-.menu {
-    color: rgb(247, 244, 244);
-    font-weight: bold;
-    margin-left: 2%;
-    display: flex;
-    gap: 20%;
-    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.9);
-}
-
-
 .txt_login {
     display: flex;
     align-items: center;  
@@ -77,12 +87,6 @@ mark {
     border: 1px solid #646464;
     backdrop-filter: blur(10px);
     box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.5);
-}
-.element{
-    color: #b4b4b4;
-}
-.element:hover {
-    transform: scale(1.1);
 }
 
 button:hover {
@@ -158,7 +162,7 @@ button:active {
 }
 .movie_container:hover{
     transition: 0.5s ease, transform 0.5s ease; 
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
 .list {
     display: flex;
@@ -175,14 +179,38 @@ button:active {
     .upper_bar {
         display: flex;
         flex-direction: column;
-        align-items: center; 
         padding-top: 2%;
         padding-left: 2%;
     }
     .menu{
         display: flex;
         gap: 50px;
-        margin-left: 1px;
+        margin-left:auto;
+        margin-right: auto;
         margin-bottom: 100px;
     }
+    .txt_login{
+      
+      margin-left: auto;
+      margin-right: auto;
+    }
+}
+.Home{
+  border:2px solid #b4b4b4;
+  transition: 0.5s ease, transform 0.5s ease; 
+}
+
+.Series{
+  border:none ;
+  transition: 0.5s ease, transform 0.5s ease; 
+}
+
+.Drama{
+  border:none ;
+  transition: 0.5s ease, transform 0.5s ease; 
+}
+
+.Kide{
+  border:none ;
+  transition: 0.5s ease, transform 0.5s ease; 
 }
