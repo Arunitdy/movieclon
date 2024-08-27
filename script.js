@@ -220,7 +220,7 @@ document.querySelector('.Login').addEventListener('click', () => {
             console.log('name:'+name+'  password:'+password);
             console.log("close login");                             
             document.querySelector('.login_div').innerHTML = '';
-            document.querySelector(".home").classList.remove('home2');
+           // document.querySelector(".home").classList.remove('home2');
             document.querySelector(".login").textContent="Logout";
             document.documentElement.style.setProperty("--login--","white");
             document.documentElement.style.setProperty("--text--","#017FDF");
