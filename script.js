@@ -1,4 +1,16 @@
 console.log("script")
+
+
+const listDiv = document.querySelector('.list');
+// Add an event listener to the div
+listDiv.addEventListener('wheel', function(e) {
+    // Prevent default vertical scroll behavior
+    e.preventDefault();
+    // Scroll horizontally instead
+    listDiv.scrollLeft += e.deltaY;
+});
+
+
 //main background
 
 let url_background = 'https://wallpapers.com/images/hd/the-avengers-in-4k-united-to-save-the-universe-wbmp983ocnwvooku.jpg';
