@@ -296,3 +296,46 @@ document.querySelector(".search__input").addEventListener("input", async functio
     }
       
 })
+
+
+
+//scrol result
+document.addEventListener("DOMContentLoaded", function() {
+  const searchResult = document.querySelector('.search_result');
+  const items = searchResult.querySelectorAll('.search_container');
+  
+  // Hide all items initially except the first 4
+  items.forEach((item, index) => {
+    if (index >= 4) {
+      item.style.display = 'none';
+    }
+  });
+  
+  // Intersection Observer for lazy loading
+  let lastVisibleIndex = 3;
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const item = entry.target;
+        item.style.display = 'block'; // Show the item when it's about to enter the viewport
+        lastVisibleIndex++;
+        
+        // Stop observing the item once it's visible
+        observer.unobserve(item);
+        
+        // Observe the next item if it exists
+        if (items[lastVisibleIndex]) {
+          observer.observe(items[lastVisibleIndex]);
+        }
+      }
+    });
+  }, {
+    root: searchResult,  // Set the root to the search_result container
+    threshold: 0.1      // Trigger when 10% of the item is visible
+  });
+
+  // Start observing the 5th item
+  if (items[lastVisibleIndex + 1]) {
+    observer.observe(items[lastVisibleIndex + 1]);
+  }
+});
