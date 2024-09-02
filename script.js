@@ -269,11 +269,11 @@ document.querySelector('.Login').addEventListener('click', () => {
 });
 
 //search result while typing
-
+/*
 document.querySelector(".search__input").addEventListener("input", async function(event){
   console.log(event.target.value);
   let arr=[];
-  const url = `http://www.omdbapi.com/?s=${search}&apikey=66968ffe`;
+  const url = `http://www.omdbapi.com/?s=${event.target.value}&apikey=66968ffe`;
   try{
      const responce =await fetch(url)
      const result= await responce.json()
@@ -282,60 +282,22 @@ document.querySelector(".search__input").addEventListener("input", async functio
      list.map((item)=>{
          console.log(item)
          list_movie+=`<div class="search_container">
-                        <img src="${item.Poster}" class="search_movie_container" alt="${item.Titel}">
-                        <div class="Titel">${item.Titel}</div>
+                        <img src="${item.Poster}" class="search_movie_container" alt="${item.Title}">
+                        <div class="Titel">${item.Title}</div>
                         <div class="year">${item.Year}</div>
                       </div>`
      })
      console.log(result)
-     document.querySelector(".list").innerHTML=list_movie
+     document.querySelector(".search_result").innerHTML=list_movie
     }
     catch(error){
         console.log(error)
-        alert("check your internet connection")
+        
+        document.querySelector(".search_result").innerHTML=" ";
     }
       
 })
 
 
 
-//scrol result
-document.addEventListener("DOMContentLoaded", function() {
-  const searchResult = document.querySelector('.search_result');
-  const items = searchResult.querySelectorAll('.search_container');
-  
-  // Hide all items initially except the first 4
-  items.forEach((item, index) => {
-    if (index >= 4) {
-      item.style.display = 'none';
-    }
-  });
-  
-  // Intersection Observer for lazy loading
-  let lastVisibleIndex = 3;
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const item = entry.target;
-        item.style.display = 'block'; // Show the item when it's about to enter the viewport
-        lastVisibleIndex++;
-        
-        // Stop observing the item once it's visible
-        observer.unobserve(item);
-        
-        // Observe the next item if it exists
-        if (items[lastVisibleIndex]) {
-          observer.observe(items[lastVisibleIndex]);
-        }
-      }
-    });
-  }, {
-    root: searchResult,  // Set the root to the search_result container
-    threshold: 0.1      // Trigger when 10% of the item is visible
-  });
-
-  // Start observing the 5th item
-  if (items[lastVisibleIndex + 1]) {
-    observer.observe(items[lastVisibleIndex + 1]);
-  }
-});
+*/

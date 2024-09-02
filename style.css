@@ -313,18 +313,23 @@ button{
 }
 .search_container{
   display: flex;
-  background-color: red;
   border-radius: 10px;
+  background-color: transparent;
 }
 .search_movie_container{
   width:70px;
   object-fit: cover;
   padding: 5px;
+  
+  border-radius: 10px;
+  height: 50px;
 }
 .Titel{
   margin-top: 10px;
+  color: #e4dede;
 }
 .year{
+  color: #e2dada;
   padding-top: 40px;
   padding-left: 110px;
 }
